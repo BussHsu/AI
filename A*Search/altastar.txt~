@@ -1,0 +1,16 @@
+My alternative astar heuristic uses the fact that x^2>= n*(x/n)^2. (n>=1)
+x is the difference between goal and target state. 
+n is the maximum possible path length from target state to goal.
+preliminary calculation = map.width*map.height - len(visited)
+
+It aims to find the smoothest ascending path, which is more energy saving.
+
+For example, if target elevation is 60, and goal elevation is 99. 
+And suppose we know that there are 5 elevations between 60-99.
+Then the least elevation cost is 5*((99-60)/5)^2
+
+Further improvement is possible with a histogram data of map elevation.
+the 'steps' in the interval (60-99) can provide a better constraint than 
+the maximum possible path length.
+Even more, we can use the actual elevation value difference instead of the
+x/n.  
