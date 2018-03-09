@@ -1,0 +1,22 @@
+For homework3, I did the following items:
+Problem 1:
+I choose the Congressional Voting Records Data Set, and I extend the attributes into 3 types: n, y, ?.
+Trainset has 423 examples
+Testset has 12 examples
+The ID3 I implement has a 91.67% of accuracy over a test set of 12 examples.
+
+Problem 2:
+Implementation of the ID3 decision tree alrorithm.
+
+Additional Credit 3:
+For continuous value attributes, the decision tree would bipartite the dataset into < and >= two subset.
+It's compatible with dataset consisting of mixed category and continuous attributes. It uses a different set of classes:
+Attribute, CategoryAttribute, RealNumAttribute, Attributes, Dataset, Example...
+that are all defined in id3_real.py
+It's not campatible with the original main.py, since the Attributes and Dataset classes are different.
+So I have main_real.py.
+Use case:
+python main_real.py id3_real class --attributes dataset/realnum/processed/iris_attrib.txt --train dataset/realnum/processed/iris.dat --test dataset/realnum/processed/iris_test.dat
+
+I also prepared Iris dataset to demonstrate this works.
+For Iris dataset, 30 data is chosen from 150 examples as the testset, and it's classified with 100% accuracy.
