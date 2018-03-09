@@ -1,0 +1,16 @@
+True
+True
+Traceback (most recent call last):
+  File "./tests/test1-part3-czhang2.py", line 35, in <module>
+    print ASK(['or', 'c', 'a', ['not', 'g'], ['not', 'e']])
+  File "/DCNFS/users/student/yhsu/Desktop/hw2_v3/hw2.py", line 14, in ASK
+    return logAgent.ask(ls)
+  File "/DCNFS/users/student/yhsu/Desktop/hw2_v3/InferenceEngine.py", line 64, in ask
+    return self.contradiction(negated)
+  File "/DCNFS/users/student/yhsu/Desktop/hw2_v3/InferenceEngine.py", line 93, in contradiction
+    if temp not in clauses:
+  File "/DCNFS/users/student/yhsu/Desktop/hw2_v3/myLogics.py", line 154, in __eq__
+    if x not in other.literals:
+  File "/DCNFS/users/student/yhsu/Desktop/hw2_v3/myLogics.py", line 24, in __eq__
+    def __eq__(self, other):
+KeyboardInterrupt
